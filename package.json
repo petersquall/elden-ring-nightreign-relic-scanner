@@ -1,0 +1,9 @@
+{
+  "name": "elden-ring-nr-relics",
+  "version": "1.0.0",
+  "description": "Nightreign Relic Scanner PWA",
+  "main": "index.html",
+  "scripts": {
+    "generate-icons": "node generate-icons.js"
+  }
+}
