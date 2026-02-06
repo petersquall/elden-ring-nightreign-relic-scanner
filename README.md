@@ -41,9 +41,10 @@ In Elden Ring: Nightreign, relics are the core of your build. As you collect mor
 
 ## Screenshots
 
-| Home Screen | Scanner | Export |
-|:-----------:|:-------:|:------:|
-| View your scanned relics, tap to expand and see all effects | Point camera at relic effects, auto-scan with OCR | Export JSON, upload to relics.pro |
+| Home Screen | Scanner | Export | Help |
+|:-----------:|:-------:|:------:|:----:|
+| ![Home](assets/screenshots/home.jpg) | ![Scanner](assets/screenshots/scanner.jpg) | ![Export](assets/screenshots/export.jpg) | ![Help](assets/screenshots/help.jpg) |
+| View your scanned relics, tap to expand and see all effects | Point camera at relic effects, auto-scan with OCR | Export JSON, upload to relics.pro | Built-in tutorial for new users |
 
 ## Quick Start
 
