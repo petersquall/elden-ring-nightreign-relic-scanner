@@ -26,6 +26,7 @@ const Camera = {
       });
       this.video.srcObject = this.stream;
       this.video.onloadedmetadata = () => this.updateCropVisuals();
+      await this.video.play();
       return true;
     } catch (err) {
       console.error('Camera error:', err);
