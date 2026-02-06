@@ -71,11 +71,11 @@ const App = {
 
     // Help modal
     const overlay = document.getElementById('helpOverlay');
-    document.getElementById('btnHelp').addEventListener('click', () => overlay.classList.add('open'));
-    document.getElementById('btnCloseHelp').addEventListener('click', () => overlay.classList.remove('open'));
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) overlay.classList.remove('open');
-    });
+    const openHelp = () => { overlay.style.display = 'flex'; overlay.classList.add('open'); };
+    const closeHelp = () => { overlay.classList.remove('open'); overlay.style.display = 'none'; };
+    document.getElementById('btnHelp').addEventListener('click', openHelp);
+    document.getElementById('btnCloseHelp').addEventListener('click', closeHelp);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeHelp(); });
   },
 
   renderRelicList() {

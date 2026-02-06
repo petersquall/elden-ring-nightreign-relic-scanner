@@ -606,7 +606,7 @@ button:disabled { opacity: 0.35; cursor: not-allowed; transform: none; }
   justify-content: center;
   padding: 16px;
 }
-.help-overlay.open { display: flex; }
+.help-overlay.open { display: flex !important; }
 .help-modal {
   background: #1e1e3a;
   border-radius: 12px;
