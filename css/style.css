@@ -595,6 +595,83 @@ button:disabled { opacity: 0.35; cursor: not-allowed; transform: none; }
   gap: 8px;
 }
 
+/* ==================== HELP MODAL ==================== */
+.help-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.help-overlay.open { display: flex; }
+.help-modal {
+  background: #1e1e3a;
+  border-radius: 12px;
+  max-width: 420px;
+  width: 100%;
+  max-height: 85dvh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.help-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid #2d2d4e;
+  position: sticky;
+  top: 0;
+  background: #1e1e3a;
+  border-radius: 12px 12px 0 0;
+}
+.help-header h2 {
+  font-size: 16px;
+  color: #d4a84b;
+}
+.help-header .btn-icon {
+  font-size: 22px;
+  color: #888;
+}
+.help-content { padding: 12px 16px 20px; }
+.help-step {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #12122a;
+}
+.help-step:last-child { border-bottom: none; }
+.help-step-num {
+  width: 28px;
+  height: 28px;
+  background: #d4a84b;
+  color: #1a1a2e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.help-step h3 {
+  font-size: 14px;
+  color: #e0e0e0;
+  margin-bottom: 4px;
+}
+.help-step p {
+  font-size: 12px;
+  color: #999;
+  line-height: 1.5;
+}
+.help-step .help-tip {
+  margin-top: 6px;
+  color: #777;
+  font-style: italic;
+}
+
 /* ==================== TOAST ==================== */
 .toast-container {
   position: fixed;

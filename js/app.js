@@ -68,6 +68,14 @@ const App = {
   bindHomeEvents() {
     document.getElementById('btnScan').addEventListener('click', () => this.showScanner());
     document.getElementById('btnExport').addEventListener('click', () => this.showExport());
+
+    // Help modal
+    const overlay = document.getElementById('helpOverlay');
+    document.getElementById('btnHelp').addEventListener('click', () => overlay.classList.add('open'));
+    document.getElementById('btnCloseHelp').addEventListener('click', () => overlay.classList.remove('open'));
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) overlay.classList.remove('open');
+    });
   },
 
   renderRelicList() {

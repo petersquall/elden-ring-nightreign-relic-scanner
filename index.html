@@ -20,6 +20,9 @@
     <h1>Relic Scanner</h1>
     <div class="header-actions">
       <span class="relic-count" id="relicCount">0 relics</span>
+      <button class="btn-icon" id="btnHelp" title="How to use">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      </button>
       <button class="btn-icon" id="btnExport" title="Export">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       </button>
@@ -181,6 +184,47 @@
         Copy to Clipboard
       </button>
       <button class="btn-danger btn-full" id="btnClearAll">Clear All Relics</button>
+    </div>
+  </div>
+</div>
+
+<!-- Help modal -->
+<div class="help-overlay" id="helpOverlay">
+  <div class="help-modal">
+    <div class="help-header">
+      <h2>How to Use</h2>
+      <button class="btn-icon" id="btnCloseHelp">&times;</button>
+    </div>
+    <div class="help-content">
+      <div class="help-step">
+        <div class="help-step-num">1</div>
+        <div>
+          <h3>Scan your relics</h3>
+          <p>Open the game on your TV/monitor and navigate to your relic inventory. Tap <strong>Scan</strong>, point your phone camera at each relic's effect list, and tap <strong>Save Relic</strong>. The app uses OCR to read the effect names and match them to the database.</p>
+          <p class="help-tip">Tip: Adjust the crop box to frame just the effects text for best results. You can tweak contrast/threshold in Settings if OCR accuracy is low.</p>
+        </div>
+      </div>
+      <div class="help-step">
+        <div class="help-step-num">2</div>
+        <div>
+          <h3>Export as JSON</h3>
+          <p>Once you've scanned all your relics, tap the <strong>Export</strong> button (bottom-right arrow icon). Then tap <strong>Download JSON</strong> to save the file to your device.</p>
+        </div>
+      </div>
+      <div class="help-step">
+        <div class="help-step-num">3</div>
+        <div>
+          <h3>Upload to relics.pro</h3>
+          <p>Go to <strong>relics.pro/my-relics</strong> (there's a direct link on the Export page). Upload your exported JSON file there to import all your scanned relics.</p>
+        </div>
+      </div>
+      <div class="help-step">
+        <div class="help-step-num">4</div>
+        <div>
+          <h3>Optimize your build</h3>
+          <p>On relics.pro you can now use the <strong>build optimizer</strong> to find the best relic combinations for your character based on your actual relic collection.</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
