@@ -105,6 +105,14 @@ The relics.pro relic scanner uses screenshot recognition that only works on PC a
 
 Built during the Nightreign launch window when managing 50+ relics became a real pain.
 
+## Support This Project
+
+If this tool saved you time, consider supporting development:
+
+- **[Buy me a coffee on Ko-fi](https://ko-fi.com/YOUR_KOFI_USERNAME)** - One-time support, every bit helps
+- **[Star this repo](https://github.com/petersquall/elden-ring-nightreign-relic-scanner)** - Helps others discover the tool
+- **Share it** - Post in your Elden Ring communities, Discord servers, and Reddit
+
 ## Contributing
 
 Found a bug or have a suggestion? [Open an issue](https://github.com/petersquall/elden-ring-nightreign-relic-scanner/issues).
