@@ -86,13 +86,24 @@ const App = {
 
     empty.style.display = 'none';
 
-    // Build effect name lookup for display
+    // Build effect lookup for display
     const effectMap = new Map();
-    EFFECTS_DB.forEach(e => effectMap.set(e.id, e.name));
+    EFFECTS_DB.forEach(e => effectMap.set(e.id, e));
 
     list.innerHTML = relics.map(r => {
-      const effectNames = r.effects.map(id => effectMap.get(id) || `#${id}`).join(', ');
+      const effectNames = r.effects.map(id => {
+        const e = effectMap.get(id);
+        return e ? e.name : `#${id}`;
+      }).join(', ');
       const relicName = r.name || Matcher.getRelicName(r.color, r.dn, r.effects.length) || `${r.color} Relic`;
+
+      const detailsHtml = r.effects.map(id => {
+        const e = effectMap.get(id);
+        const name = e ? e.name : `Unknown #${id}`;
+        const desc = e && e.desc ? `<div class="detail-desc">${e.desc}</div>` : '';
+        return `<div class="relic-detail-effect"><div class="detail-name">${name}</div>${desc}</div>`;
+      }).join('');
+
       return `
         <div class="relic-card" data-id="${r.id}">
           <div class="relic-color-bar ${r.color}"></div>
@@ -105,6 +116,7 @@ const App = {
             </div>
           </div>
           <button class="relic-delete" data-delete="${r.id}">&times;</button>
+          <div class="relic-details">${detailsHtml}</div>
         </div>
       `;
     }).join('');
@@ -117,6 +129,14 @@ const App = {
         RelicManager.delete(id);
         this.renderRelicList();
         UI.toast('Relic deleted', 'info');
+      });
+    });
+
+    // Expand/collapse on card click
+    list.querySelectorAll('.relic-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('[data-delete]')) return;
+        card.classList.toggle('expanded');
       });
     });
   },
