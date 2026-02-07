@@ -748,3 +748,66 @@ button:disabled { opacity: 0.35; cursor: not-allowed; transform: none; }
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* ==================== SUPPORT FOOTER ==================== */
+.support-footer {
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 16px;
+  z-index: 5;
+}
+.support-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s, transform 0.1s;
+}
+.support-link:active { opacity: 0.7; transform: scale(0.97); }
+.support-kofi {
+  background: #ff5e5b;
+  color: #fff;
+}
+.support-star {
+  background: #2d2d4e;
+  color: #e0e0e0;
+  border: 1px solid #3d3d5e;
+}
+
+/* ==================== HELP SUPPORT LINKS ==================== */
+.help-support-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.help-support-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.help-support-btn:active { opacity: 0.7; }
+.kofi-btn {
+  background: #ff5e5b;
+  color: #fff;
+}
+.star-btn {
+  background: #2d2d4e;
+  color: #e0e0e0;
+  border: 1px solid #3d3d5e;
+}
