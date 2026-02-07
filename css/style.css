@@ -751,15 +751,10 @@ button:disabled { opacity: 0.35; cursor: not-allowed; transform: none; }
 
 /* ==================== SUPPORT FOOTER ==================== */
 .support-footer {
-  position: absolute;
-  bottom: 80px;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: center;
   gap: 12px;
-  padding: 0 16px;
-  z-index: 5;
+  padding: 16px 16px 100px;
 }
 .support-link {
   display: flex;
